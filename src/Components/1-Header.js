@@ -14,7 +14,6 @@ export default function Header() {
             <input type="text" id="searchInput" placeholder="Enter task name"/>
             <button id="searchBtn">Search</button>
         </div>
-      
     </div>
   )
 }

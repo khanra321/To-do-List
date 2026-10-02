@@ -71,6 +71,10 @@
     text-overflow: auto;
 
 }
+#searchInput.show {
+        display: block;
+        width: 200px;
+    }
 
 #searchInput:focus{
     display: block;
@@ -116,6 +120,14 @@
         display: none;
     }
 
+    #searchInput.show {
+        display: block;
+    }
+    #navLink.hideNav {
+        display: none;
+    }
+
+
     #searchBtn{
         height: 30px;
         width: 30px;
@@ -125,8 +137,16 @@
         border-radius: 50%;
 
     }
-    #searchInput.show {
+    
+}
+
+@media (min-width: 501px) {
+
+    #navLink.hideNavLink {
+        display: flex;
+    }
+
+    #searchInput {
         display: block;
-        width: 200px;
     }
 }

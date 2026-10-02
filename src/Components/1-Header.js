@@ -13,7 +13,7 @@ export default function Header() {
             <a href="#Home" id="home">Home</a>
             <a href="#About" id="home">About</a>
             <a href="#Contact" id="home">Contact</a>
-            <a href="#Login" id="home"></a>
+            <a href="#Login" id="home"> Login</a>
         </div>
 
         <div id="navSearch">
@@ -23,5 +23,5 @@ export default function Header() {
             
         </div>
     </div>
-  )
+  );
 }

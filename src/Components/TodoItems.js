@@ -1,4 +1,5 @@
 import React from 'react'
+import "../Styles/TodosItems.css"
 
 export default function TodoItems({tasks}) {
 
@@ -6,8 +7,8 @@ export default function TodoItems({tasks}) {
     <div id="todoItems">
         {tasks.map((task, index) => (
             <div className="todoIem" key={index}>
-                <p>{task}</p>
-                <button></button>
+                <p id = "p1">{task}</p>
+                <button>x</button>
             </div>
         ))}
 

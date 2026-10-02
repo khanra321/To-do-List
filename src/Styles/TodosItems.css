@@ -1,0 +1,32 @@
+#todoItems{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}    
+.todoIem{
+    height: 3%;
+    width:auto;
+    min-width: 50vw;
+
+    margin: 20px;
+    padding: 8px;
+    text-align: center;
+    font-size: x-large;
+
+    color:white;
+    background-color: rgb(118, 1, 107);
+
+    border: 1px solid white;
+    border-radius: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-overflow: auto;
+    
+}
+#p1{
+    margin-left: 30px;
+}

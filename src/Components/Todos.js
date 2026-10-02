@@ -1,5 +1,6 @@
 
 import React, {useState} from 'react'
+import "../Styles/Todos.css"
 import AddTodo from './AddTodo.js'
 import TodoItems from './TodoItems.js'
 
@@ -23,7 +24,7 @@ export default function Todos() {
         <TodoItems
          tasks={tasks}
         />
-        
+
     </div>
   )
 }

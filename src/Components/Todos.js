@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 import "../Styles/Todos.css"
 import AddTodo from './AddTodo.js'
 import TodoItems from './TodoItems.js'
+import ClrTodos from './ClrTodos.js'
 
 export default function Todos() {
     const [tasks, setTasks] = useState([]);
@@ -28,6 +29,7 @@ export default function Todos() {
          tasks={tasks}
          removeTask={removeTask}
         />
+        <ClrTodos/>
 
     </div>
   )

@@ -8,7 +8,10 @@ export default function Todos() {
     const [tasks, setTasks] = useState([]);
     const addTask = (task) => {
         setTasks([...tasks, task])
-    }
+    };
+    const removeTask = (index) => {
+      setTasks(tasks.filter((_,i) => i !== index));
+    };
      
   return (
     <div id="container">
@@ -23,6 +26,7 @@ export default function Todos() {
 
         <TodoItems
          tasks={tasks}
+         removeTask={removeTask}
         />
 
     </div>

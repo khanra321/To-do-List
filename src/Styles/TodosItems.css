@@ -5,13 +5,13 @@
     justify-content: center;
     align-items: center;
 }    
-.todoIem{
-    height: 3%;
-    width:auto;
-    min-width: 50vw;
+.todoItem{
+    height: 35;
+    width:50vw;
 
     margin: 20px;
     padding: 8px;
+
     text-align: center;
     font-size: x-large;
 
@@ -24,9 +24,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-overflow: auto;
+    
     
 }
 #p1{
+    margin:0;
     margin-left: 30px;
+    overflow-wrap: anywhere;
+}
+#removeTask{
+    flex-shrink: 0;
+
+    width: 35px;
+    height: 35px;
+
+    font-size: x-large;
+    color: white;
+    background-color: red;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
 }

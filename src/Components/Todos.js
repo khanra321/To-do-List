@@ -13,6 +13,9 @@ export default function Todos() {
     const removeTask = (index) => {
       setTasks(tasks.filter((_,i) => i !== index));
     };
+    const TodosClr = () => {
+      setTasks([])
+    }
      
   return (
     <div id="container">
@@ -29,7 +32,7 @@ export default function Todos() {
          tasks={tasks}
          removeTask={removeTask}
         />
-        <ClrTodos/>
+        <ClrTodos TodosClr={TodosClr}/>
 
     </div>
   )

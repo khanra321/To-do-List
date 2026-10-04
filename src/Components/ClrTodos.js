@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
+import React from 'react'
 import "../Styles/ClrTodos.css"
 
 
-export default function ClrTodos() {
+export default function ClrTodos({TodosClr}) {
   return (
     <div>
-      <button id="clear">Clear</button>
+      <button onClick = {TodosClr} id="clear">Clear</button>
     </div>
   )
 }

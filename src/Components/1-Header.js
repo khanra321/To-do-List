@@ -7,6 +7,11 @@ import { Search } from "lucide-react";
 export default function Header() {
 
   const [showSearch, setShowSearch] = useState(false);
+  const handleSearch = () => {
+    if (window.innerWidth <= 500) {
+      setShowSearch(!showSearch);
+    }
+  }
   return (
     <div id="header">
         <div id="navLink" className={showSearch ? "hideNavLink" : ""}>
@@ -16,10 +21,11 @@ export default function Header() {
             <a href="#Login" id="home"> Login</a>
         </div>
 
-        <div id="navSearch">
+        <div id="navSearch"className={showSearch ? "hideNavLink" : ""}>
 
-            <input type="text" id="searchInput" className={showSearch ? "show" : ""} placeholder="Enter task name"/>
-            <button id="searchBtn" onClick={() => setShowSearch(!showSearch)}><Search size={24} /></button>
+            <input type="text" id="searchInput" className={showSearch ? "show" : ""} placeholder="
+            search task name"/>
+            <button id="searchBtn" onClick={handleSearch}><Search size={21} /></button>
             
         </div>
     </div>

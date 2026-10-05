@@ -26,7 +26,7 @@ export default function Todos({ search }) {
         .filter(({ task }) => task.toLowerCase().includes(search.toLowerCase()))
     : [];
 
-  return (
+  return ( 
     <div id="container">
       <SearchTodo
         tasks={tasks}

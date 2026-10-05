@@ -8,7 +8,7 @@ export default function SearchTodo({ searchFilter, removeTask, search }) {
   return (
     <div id="todoItems">
       {searchFilter.length === 0 ? (
-        <p id="p1">No matching task found.</p>
+        <p id="bMassa">No matching task found.</p>
       ) : (
         searchFilter.map(({ task, index }) => (
           <div className="todoItem" key={index}>

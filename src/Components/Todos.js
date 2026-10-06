@@ -4,6 +4,7 @@ import AddTodo from './AddTodo.js';
 import TodoItems from './TodoItems.js';
 import ClrTodos from './ClrTodos.js';
 import SearchTodo from './SearchTodo.js';
+import AddTodoItem from './AddTodoItem.js';
 
 export default function Todos({ search }) {
   const [tasks, setTasks] = useState([]);
@@ -37,6 +38,7 @@ export default function Todos({ search }) {
 
       <h1 id="listCreate">Create To-Dos List</h1>
 
+      <AddTodoItem />
       <AddTodo addTask={addTask} />
 
       <h2 id="list">My Todos:</h2>

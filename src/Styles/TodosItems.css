@@ -1,54 +1,50 @@
-#todoItems{
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}    
-.todoItem{
-    height: 35;
-    width:50vw;
+ #todoItems{
+    height: 150px;
+    width:60vw;
 
     margin: 20px;
-    padding: 8px;
+    padding: 5px 20px 5px 20px;
 
-    text-align: center;
-    font-size: x-large;
 
-    color:white;
-    background-color: rgb(118, 1, 107);
-
-    border: 1px solid white;
+    border: 1px solid rgb(43, 2, 250);
     border-radius: 25px;
 
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     
     
 }
-#bMassa{
-    color:red;
-    font-size: x-large;
-}
-#p1{
-    margin:0;
-    margin-left: 30px;
+
+#taskName{ 
+    color: rgb(0, 115, 237);
+    text-decoration: underline;
     overflow-wrap: anywhere;
+
+}
+#taskDec{
+    overflow-wrap: anywhere;
+    overflow: auto;
+
+
 }
 #removeTask{
     flex-shrink: 0;
 
-    width: 35px;
-    height: 35px;
+    width: 100px;
+    height: 30px;
 
-    font-size: x-large;
+    font-size: large;
     color: white;
     background-color: red;
 
-    border: none;
-    border-radius: 50%;
+    border: 1px solid blueviolet;
+    border-radius: 10px;
 
     cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }

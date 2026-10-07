@@ -1,16 +1,13 @@
 import React from 'react'
 import "../Styles/TodosItems.css"
 
-export default function TodoItems({tasks,removeTask}) {
+export default function TodoItems({task,removeTask}) {
 
   return (
     <div id="todoItems">
-        {tasks.map((taskItm, index) => (
-            <div className="todoItem" key={index}>
-                <p id = "p1">{taskItm}</p>
-                <button id="removeTask" onClick = {() => removeTask(index)}>x</button>
-            </div>
-        ))} 
+                <h1 id ="taskName">{task.taskName}</h1>
+                <p id = "taskDec">{task.taskDec}</p>
+                <button id="removeTask" onClick = {removeTask}>Delate</button>
     </div>
   )
 }

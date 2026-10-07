@@ -1,17 +1,19 @@
 import React, {useState} from 'react'
 import "../Styles/AddTodoItem.css"
 
-export default function AddTodoItem() {
+export default function AddTodoItem(props) {
 
     const [taskName, setName] = useState("");
     const [taskDec, setDec] =  useState("");
-    const TaskHandle = () => {
-        if(taskName || taskDec === ""){
-            alart=("Fill the form froperly first")
+    
+    const TaskHandle = (e) => {
+        e.preventDefault();
+        if(!taskName || !taskDec){
+            alert("Fill the form froperly first");
         }else{
-            addTask(taskName, taskDec);
+            props.addTasks(taskName, taskDec);
             setName("");
-            setDec("")
+            setDec("");
         }
     };
 

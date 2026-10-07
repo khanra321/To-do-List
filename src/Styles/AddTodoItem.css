@@ -23,7 +23,8 @@
 #labelIn{
     padding-bottom: 4px;
     color: rgb(0, 16, 137);
-    font-size:x-large;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #taskIn{
     
@@ -33,6 +34,15 @@
 
     border: 1px solid rgb(0, 42, 255);
     border-radius: 10px;
+}
+#taskIn:focus{
+
+    inset: 1;
+    background-color: rgb(255, 253, 253);
+    box-shadow: 
+        inset 6px 6px 8px #959697,
+        inset -4px -6px 6px white;
+    outline: none;
 }
 
 #addBtn{
@@ -44,5 +54,9 @@
     
     border: 1px solid rgb(0, 42, 255);
     border-radius: 10px;
+
+}
+#addBtn:active{
+    background-color: rgb(1, 1, 83);
 
 }

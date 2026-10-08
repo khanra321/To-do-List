@@ -29,8 +29,8 @@ export default function Todos({ search }) {
 
   };
 
-  const removeTask = (index) => {
-    setTasks(tasks.filter((_, i) => i !== index));
+  const removeTask = (snoz) => {
+    setTasks(tasks.filter((tas) => tas.sno !== snoz));
   };
 
   const TodosClr = () => {
@@ -59,12 +59,10 @@ export default function Todos({ search }) {
 
       <h2 id="list">My Todos:</h2>
       {tasks.length === 0 ? 
-      <p>No todo is display</p>:
+      <p id="noTodoMsg">No todo is display</p>:
       tasks.map((task) => {
-        return <TodoItems task={task} key={task.sno} tasks={tasks} removeTask={removeTask} /> 
+        return <TodoItems task={task} key={task.sno} removeTask={removeTask} /> 
       })}
-
-      
       <ClrTodos TodosClr={TodosClr} />
     </div>
   );

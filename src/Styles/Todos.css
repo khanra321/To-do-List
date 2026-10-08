@@ -7,7 +7,6 @@
 #container{
     margin-top: 100px;
     
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,10 +14,25 @@
 
 }
 #listCreate{
-    color:rgb(16, 0, 137)
+    margin-bottom: 10px;
+    color:rgb(16, 0, 137);
 }
 
 #list{
-    margin-bottom: 50px;
+    margin-top: 50px;
     color:rgb(78, 2, 255)
+}
+#noTodoMsg{
+    height: 50px;
+
+    margin: 20px;
+    padding: 5px 20px 5px 20px;
+
+
+    border: 1px solid rgb(43, 2, 250);
+    border-radius: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

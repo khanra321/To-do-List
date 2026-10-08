@@ -9,7 +9,6 @@ export default function Todos({ search }) {
 
   const [tasks, setTasks] = useState([]);
   
-  
   const addTasks = (taskName, taskDec) => {
     let sno;
     if(tasks.length===0){

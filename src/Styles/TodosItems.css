@@ -1,3 +1,18 @@
+ #noTodoMsg{
+    height: 50px;
+
+    margin: 20px;
+    padding: 5px 20px 5px 20px;
+
+
+    border: 1px solid rgb(43, 2, 250);
+    border-radius: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
  #todoItems{
     height: 150px;
     width:60vw;

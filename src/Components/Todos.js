@@ -37,10 +37,10 @@ export default function Todos({ search }) {
     setTasks([]);
   };
 
-  const filteredTasks = search.trim()
+  const filteredTasks = search
     ? tasks
-        .map((task, index) => ({ task, index }))
-        .filter(({ task }) => task.toLowerCase().includes(search.toLowerCase()))
+        .map((task, sno) => ({task, sno}))
+        .filter(({task}) => task.taskName.toLowerCase().includes(search.toLowerCase()))
     : [];
 
   return ( 

@@ -7,7 +7,15 @@ import AddTodoItem from './AddTodoItem.js';
 
 export default function Todos({ search }) {
 
-  const [tasks, setTasks] = useState([]);
+  let initTask;
+
+  if (localStorage.getItem("tasks")=== null){
+    initTask = [];
+  }else{
+    initTask = JSON.parse(localStorage.getItem("tasks"));
+
+  }
+  const [tasks, setTasks] = useState(initTask);
   
   const addTasks = (taskName, taskDec) => {
     let sno;
@@ -24,12 +32,15 @@ export default function Todos({ search }) {
       taskDec: taskDec,
     }
     setTasks([...tasks, myTask]);
-    console.log(myTask);
+
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    
 
   };
 
   const removeTask = (snoz) => {
     setTasks(tasks.filter((tas) => tas.sno !== snoz));
+    localStorage.setItem("tasks", JSON.stringify(tasks));
   };
 
   const TodosClr = () => {

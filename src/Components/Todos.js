@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../Styles/Todos.css';
 import TodoItems from './TodoItems.js';
 import ClrTodos from './ClrTodos.js';
@@ -16,6 +16,10 @@ export default function Todos({ search }) {
 
   }
   const [tasks, setTasks] = useState(initTask);
+  useEffect(() =>{
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+
+  }, [tasks])
   
   const addTasks = (taskName, taskDec) => {
     let sno;
@@ -33,7 +37,7 @@ export default function Todos({ search }) {
     }
     setTasks([...tasks, myTask]);
 
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    
     
 
   };

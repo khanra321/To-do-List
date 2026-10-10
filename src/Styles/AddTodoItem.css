@@ -13,6 +13,12 @@
     border-radius: 10px;
 
 }
+@media (max-width: 400px){
+    #addTask{
+        width: 80vw;
+    }
+
+}
 #divForm{
     width: 100%;
 

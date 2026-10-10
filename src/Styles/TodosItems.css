@@ -1,3 +1,5 @@
+
+ 
  #noTodoMsg{
     height: 50px;
 
@@ -62,4 +64,19 @@
     justify-content: center;
     align-items: center;
 
+}
+
+@media(max-width: 400px) {
+    #noTodoMsg{
+        width:80vw;
+    }
+    
+    #todoItems{
+        width:80vw;
+    }
+    
+    #taskName{ 
+        font-size: 30px;
+    }
+    
 }

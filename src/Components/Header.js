@@ -1,6 +1,7 @@
 import{ useState } from 'react';
 import "../Styles/Header.css";
-import { Search } from "lucide-react";
+import {  Search } from "lucide-react";
+import {Link} from 'react-router-dom';
 
 
 
@@ -23,12 +24,13 @@ export default function Header({searchFun}) {
   };
   
   return (
+    <>
     <div id="header">
         <div id="navLink" className={showSearch ? "hideNavLink" : ""}>
-            <a href="#Home" id="home">Home</a>
-            <a href="#About" id="home">About</a>
-            <a href="#Contact" id="home">Contact</a>
-            <a href="#Login" id="home"> Login</a>
+            <Link to="/" id="navB">Home</Link>
+            <Link to="/About" id="navB">About</Link>
+            <Link to="/Contact" id="navB">Contact</Link>
+            <Link to="/Login" id="navB"> Login</Link>
         </div>
 
         <div id="navSearch"className={showSearch ? "hideNavLink" : ""}>
@@ -49,5 +51,6 @@ export default function Header({searchFun}) {
             
         </div>
     </div>
+    </>
   );
 }

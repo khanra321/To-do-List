@@ -1,7 +1,9 @@
 import './App.css';
 import { useState } from 'react';
-import Header from './Components/1-Header.js';
+import Header from './Components/Header.js';
 import Todos from './Components/Todos.js';
+import About from './Components/About.js';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 
@@ -13,10 +15,15 @@ function App() {
   };
 
   return (
-    <>
+    <Router>
       <Header searchFun={searchFun} />
-      <Todos search={search} />
-    </>
+      <Routes>
+        <Route path="/" element={<Todos search={search} />} />
+
+        <Route path="/About" element={<About />} />
+      </Routes>
+
+    </Router>
   );
 }
 

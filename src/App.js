@@ -17,14 +17,18 @@ function App() {
 
   return (
     <Router>
-      <Header searchFun={searchFun} />
+      <div className="page">
+        <Header searchFun={searchFun} />
+        <main className="main-content">
 
-      <Routes>
-        <Route path="/" element={<Todos search={search} />} />
-        <Route path="/About" element={<About />} />
-      </Routes>
+          <Routes>
+            <Route path="/" element={<Todos search={search} />} />
+            <Route path="/About" element={<About />} />
+          </Routes>
+        </main>
 
-      <Footer/>
+        <Footer/>
+      </div>
 
     </Router>
   );

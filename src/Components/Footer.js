@@ -1,29 +1,30 @@
-import React from 'react'
+import React from 'react';
 
 export default function Footer() {
     const fStyle = {
-        height: "auto",
+        minHeight: "60px",
         width: "100%",
         marginTop: "20px",
+        padding: "10px 20px",
+        boxSizing: "border-box",
 
-        fontSize: "12 px" ,
+        fontSize: "12px",
         color: "white",
         backgroundColor: "black",
-        
+
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-
-        position: "stiky",
-        bottom: "0",
-
+        flexWrap: "wrap",
+        gap: "10px",
+        position: "rela"
     };
-  return (
-    
-    <div id='footer' style ={fStyle} >
-        <p style={{marginLeft: "20 px"}}>This is footer</p>
-        <p>todo@gmail.com</p>
-                    
-    </div>
-  )
+
+    return (
+        <footer style={fStyle}>
+            <p>This is footer</p>
+            <p>todo@gmail.com</p>
+        </footer>
+    );
 }
